@@ -1,0 +1,242 @@
+.bt-wrap {
+    padding: 1.5rem;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+.bt-header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.bt-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin: 0;
+}
+
+.bt-count {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+}
+
+.bt-form-card {
+    background: var(--color-background-primary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-lg);
+    padding: 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.bt-form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.bt-field {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.bt-field.full {
+    grid-column: 1 / -1;
+}
+
+.bt-label {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    font-weight: 500;
+}
+
+.bt-field input,
+.bt-field select,
+.bt-field textarea {
+    font-size: 14px;
+}
+
+.bt-field textarea {
+    resize: vertical;
+    min-height: 64px;
+    padding: 8px 10px;
+    border: 0.5px solid var(--color-border-secondary);
+    border-radius: var(--border-radius-md);
+    background: var(--color-background-primary);
+    color: var(--color-text-primary);
+    font-family: inherit;
+}
+
+.bt-field textarea:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px var(--color-border-secondary);
+}
+
+.bt-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    margin-top: 12px;
+}
+
+.bt-btn-primary {
+    background: var(--color-text-primary);
+    color: var(--color-background-primary);
+    border: none;
+    border-radius: var(--border-radius-md);
+    padding: 8px 18px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: inherit;
+    transition: opacity 0.15s;
+}
+
+.bt-btn-primary:hover {
+    opacity: 0.8;
+}
+
+.bt-btn-primary:active {
+    transform: scale(0.98);
+}
+
+.bt-filters {
+    display: flex;
+    gap: 6px;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.bt-chip {
+    font-size: 12px;
+    padding: 4px 12px;
+    border-radius: 99px;
+    border: 0.5px solid var(--color-border-secondary);
+    background: none;
+    color: var(--color-text-secondary);
+    cursor: pointer;
+    font-family: inherit;
+    transition: background 0.15s, color 0.15s;
+}
+
+.bt-chip.active {
+    background: var(--color-text-primary);
+    color: var(--color-background-primary);
+    border-color: transparent;
+}
+
+.bt-empty {
+    text-align: center;
+    padding: 2.5rem 1rem;
+    color: var(--color-text-tertiary);
+    font-size: 14px;
+}
+
+.bt-book-card {
+    background: var(--color-background-primary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-lg);
+    padding: 1rem 1.25rem;
+    margin-bottom: 10px;
+}
+
+.bt-book-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.bt-book-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.bt-book-title {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin: 0 0 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.bt-book-author {
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    margin: 0 0 8px;
+}
+
+.bt-book-comment {
+    font-size: 13px;
+    color: var(--color-text-primary);
+    margin: 0 0 8px;
+    line-height: 1.5;
+}
+
+.bt-book-meta {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.bt-badge {
+    font-size: 11px;
+    font-weight: 500;
+    padding: 2px 8px;
+    border-radius: 99px;
+}
+
+.bt-badge.leyendo {
+    background: #E6F1FB;
+    color: #0C447C;
+}
+
+.bt-badge.leido {
+    background: #EAF3DE;
+    color: #27500A;
+}
+
+.bt-badge.pendiente {
+    background: #FAEEDA;
+    color: #633806;
+}
+
+.bt-book-date {
+    font-size: 11px;
+    color: var(--color-text-tertiary);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.bt-book-actions {
+    display: flex;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.bt-icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--color-text-tertiary);
+    font-size: 16px;
+    padding: 4px;
+    border-radius: var(--border-radius-md);
+    transition: color 0.15s, background 0.15s;
+}
+
+.bt-icon-btn:hover {
+    color: var(--color-text-primary);
+    background: var(--color-background-secondary);
+}
+
+.bt-icon-btn.danger:hover {
+    color: var(--color-text-danger);
+}
