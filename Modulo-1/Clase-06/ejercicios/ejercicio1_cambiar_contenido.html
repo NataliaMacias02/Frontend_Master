@@ -1,0 +1,40 @@
+<!--
+Ejercicio 1: Cambiar el contenido de una página con un botón
+Objetivo:
+Crear una página donde el contenido de un título y un párrafo cambie cuando el usuario haga clic en un botón.
+
+Instrucciones:
+1.
+Crea una página HTML con un título <h1>, un párrafo <p>, y un botón <button>.
+2.
+El título y el párrafo deben tener un contenido inicial.
+3.
+Cuando el usuario haga clic en el botón, el contenido del título y el párrafo debe cambiar. El título puede decir algo como "¡Bienvenido a mi página!" y el párrafo debe decir "Este es el contenido inicial".
+4.
+Después de hacer clic, el título debe decir "¡Contenido actualizado!" y el párrafo debe decir "El contenido ha sido cambiado".
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="titulo">Bienvenido a mi página!</h1>
+    <p id="parrafo">Este es el contenido inicial</p>
+    <button id="boton">Cambiar contenido</button>
+
+    <script>
+        const boton = document.getElementById("boton");
+        const titulo = document.getElementById("titulo");
+        const parrafo = document.getElementById("parrafo");
+
+        boton.addEventListener("click", function() {
+            titulo.textContent = "¡Contenido Actualizado!";
+            parrafo.textContent = "El contenido ha sido cambiado";
+        })
+    </script>
+</body>
+</html>

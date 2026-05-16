@@ -1,0 +1,48 @@
+<!--
+Ejercicio 2: Mostrar u ocultar un contenido
+Objetivo:
+Crear una página que tenga un párrafo oculto por defecto. Al hacer clic en un botón, el párrafo debe aparecer, y al hacer clic nuevamente, el párrafo debe desaparecer.
+
+Instrucciones:
+1.
+Crea una página HTML con un párrafo y un botón.
+2.
+El párrafo debe estar inicialmente oculto (puedes usar la propiedad display: none; en CSS).
+3.
+Cuando el usuario haga clic en el botón, el párrafo debe aparecer si está oculto, o desaparecer si ya está visible.
+4.
+El texto del botón debe cambiar cada vez que el usuario haga clic: si el párrafo está oculto, el botón debe decir "Mostrar contenido", y si está visible, debe decir "Ocultar contenido".
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        p {display: none;}
+    </style>
+</head>
+
+<body>
+    <p id="parrafo">¿Me puedes ver 👀?</p>
+    <button id="boton">Mostrar Contenido</button>
+
+    <script>
+        const boton = document.getElementById("boton");
+        const parrafo = document.getElementById("parrafo");
+
+        boton.addEventListener("click", function() {
+            if(parrafo.style.display === "none") {
+                parrafo.style.display = "block";
+                boton.textContent = "Ocultar contenido"; 
+            } else {
+                parrafo.style.display = "none"
+                boton.textContent = "Mostrar contenido";
+            }
+        })
+    </script>
+</body>
+</html>
