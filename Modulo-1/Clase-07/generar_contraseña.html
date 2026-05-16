@@ -1,0 +1,84 @@
+<!-- 
+Objetivo
+El objetivo es crear un sitio que nos permita generar una contraseña segura, basado en el proyecto de frontend mentor: link
+
+Apartir de la imagen propocionada maqueta y genera el formulario necesario para generar el html
+El sitio debe ser capaza de generar una contraseña diferente de mas de 8 palabras usando simbolos, letras y numéros
+Imagina las diferentes opciones que puedes implementar en tu página
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="pg-wrap">
+        <h2 class="sr-only">Generador de contraseñas seguras</h2>
+        <p class="pg-title">Generador de contraseñas</p>
+
+        <div class="pg-display-wrap">
+            <div class="pg-display">
+                <span class="pg-password empty" id="pwDisplay">Genera tu contraseña...</span>
+                <button class="pg-copy-btn" id="copyBtn" title="Copiar" aria-label="Copiar contraseña">
+                    <i class="ti ti-copy" aria-hidden="true"></i>
+                </button>
+            </div>
+            <span class="pg-toast" id="toast">Copiado</span>
+        </div>
+
+        <div class="pg-card">
+            <div class="pg-slider-wrap">
+                <div class="pg-row">
+                    <span class="pg-label">Longitud</span>
+                    <span class="pg-value" id="lenVal">16</span>
+                </div>
+                <input type="range" class="pg-range" id="lengthSlider" min="8" max="32" value="16" step="1">
+            </div>
+
+            <div class="pg-checks">
+                <label class="pg-check-item">
+                    <input type="checkbox" id="chkUpper" checked>
+                    <span class="pg-check-label">Mayúsculas</span>
+                </label>
+                <label class="pg-check-item">
+                    <input type="checkbox" id="chkLower" checked>
+                    <span class="pg-check-label">Minúsculas</span>
+                </label>
+                <label class="pg-check-item">
+                    <input type="checkbox" id="chkNumbers" checked>
+                    <span class="pg-check-label">Números</span>
+                </label>
+                <label class="pg-check-item">
+                    <input type="checkbox" id="chkSymbols">
+                    <span class="pg-check-label">Símbolos</span>
+                </label>
+            </div>
+        </div>
+
+        <div class="pg-strength">
+            <span class="pg-strength-label">Seguridad</span>
+            <span class="pg-strength-text" id="strengthText" style="color: var(--color-text-tertiary)">—</span>
+            <div class="pg-bars">
+                <div class="pg-bar" id="bar1"></div>
+                <div class="pg-bar" id="bar2"></div>
+                <div class="pg-bar" id="bar3"></div>
+                <div class="pg-bar" id="bar4"></div>
+            </div>
+        </div>
+
+        <button class="pg-generate" id="genBtn">
+            <i class="ti ti-refresh" aria-hidden="true"></i>
+            Generar contraseña
+        </button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,227 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syne:wght@400;700;800&display=swap");
+
+.pg-wrap {
+    font-family: "Syne", sans-serif;
+    padding: 2rem 1.5rem;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.pg-title {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--color-text-secondary);
+    margin: 0 0 1.5rem;
+}
+
+.pg-display {
+    background: var(--color-background-secondary);
+    border: 0.5px solid var(--color-border-secondary);
+    border-radius: var(--border-radius-lg);
+    padding: 1.25rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+    min-height: 64px;
+}
+
+.pg-password {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 20px;
+    color: var(--color-text-primary);
+    word-break: break-all;
+    flex: 1;
+    letter-spacing: 0.05em;
+    transition: opacity 0.15s;
+}
+
+.pg-password.empty {
+    color: var(--color-text-tertiary);
+    font-size: 14px;
+    font-family: "Syne", sans-serif;
+}
+
+.pg-copy-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 6px 8px;
+    color: var(--color-text-secondary);
+    font-size: 20px;
+    border-radius: var(--border-radius-md);
+    transition:
+        color 0.15s,
+        background 0.15s;
+    flex-shrink: 0;
+    margin-left: 12px;
+}
+
+.pg-copy-btn:hover {
+    background: var(--color-background-tertiary);
+    color: var(--color-text-primary);
+}
+
+.pg-card {
+    background: var(--color-background-primary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: var(--border-radius-lg);
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.pg-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.pg-row:last-child {
+    margin-bottom: 0;
+}
+
+.pg-label {
+    font-size: 14px;
+    color: var(--color-text-primary);
+    font-weight: 400;
+}
+
+.pg-value {
+    font-family: "Share Tech Mono", monospace;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--color-text-primary);
+    min-width: 28px;
+    text-align: right;
+}
+
+.pg-slider-wrap {
+    margin: 0 0 1.5rem;
+}
+
+.pg-slider-wrap .pg-row {
+    margin-bottom: 8px;
+}
+
+input[type="range"].pg-range {
+    width: 100%;
+    accent-color: var(--color-text-primary);
+}
+
+.pg-checks {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+.pg-check-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+}
+
+.pg-check-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--color-text-primary);
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.pg-check-label {
+    font-size: 14px;
+    color: var(--color-text-primary);
+    cursor: pointer;
+    user-select: none;
+}
+
+.pg-strength {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1.25rem;
+}
+
+.pg-strength-label {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 700;
+    flex: 1;
+}
+
+.pg-strength-text {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.pg-bars {
+    display: flex;
+    gap: 4px;
+}
+
+.pg-bar {
+    width: 10px;
+    height: 22px;
+    border-radius: 2px;
+    background: var(--color-background-tertiary);
+    border: 0.5px solid var(--color-border-secondary);
+    transition:
+        background 0.3s,
+        border-color 0.3s;
+}
+
+.pg-generate {
+    width: 100%;
+    padding: 14px;
+    font-family: "Syne", sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    background: var(--color-text-primary);
+    color: var(--color-background-primary);
+    border: none;
+    border-radius: var(--border-radius-lg);
+    cursor: pointer;
+    transition:
+        opacity 0.15s,
+        transform 0.1s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.pg-generate:hover {
+    opacity: 0.85;
+}
+
+.pg-generate:active {
+    transform: scale(0.98);
+}
+
+.pg-toast {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--color-text-success);
+    opacity: 0;
+    transition: opacity 0.2s;
+    pointer-events: none;
+}
+
+.pg-display-wrap {
+    position: relative;
+}
