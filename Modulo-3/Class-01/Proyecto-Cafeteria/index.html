@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Barra &mdash; Simulador de Pedidos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=JetBrains+Mono:wght@400;500;700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="grain"></div>
+
+  <header class="top">
+    <div class="top__brand">
+      <span class="top__mark">☕</span>
+      <div>
+        <h1>La Barra</h1>
+        <p class="top__tag">Simulador de pedidos &mdash; Event Loop &amp; Asincronía</p>
+      </div>
+    </div>
+    <div class="top__stats" id="stats" aria-live="polite">
+      <div class="stat">
+        <span class="stat__value" id="statPending">0</span>
+        <span class="stat__label">En Proceso</span>
+      </div>
+      <div class="stat">
+        <span class="stat__value" id="statDone">0</span>
+        <span class="stat__label">Completados</span>
+      </div>
+    </div>
+  </header>
+
+  <main class="board">
+    <section class="counter">
+      <p class="counter__hint">Cada pedido se prepara de forma independiente y asincrónica: el mostrador nunca se
+        bloquea.</p>
+      <button id="addOrderBtn" class="btn">
+        <span class="btn__plus">+</span> Agregar Pedido
+      </button>
+    </section>
+
+    <section class="orders" aria-label="Pedidos">
+      <ul id="orderList" class="orders__list"></ul>
+      <p id="emptyState" class="empty">La barra está tranquila. Presiona <strong>Agregar Pedido</strong> para abrir un
+        ticket.</p>
+    </section>
+  </main>
+
+  <footer class="log-panel">
+    <div class="log-panel__head">
+      <span>Bitácora del Event Loop</span>
+      <button id="clearLogBtn" class="log-panel__clear">Limpiar</button>
+    </div>
+    <ul id="log" class="log-panel__list"></ul>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
