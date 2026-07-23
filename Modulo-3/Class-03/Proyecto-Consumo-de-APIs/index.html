@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Consumo de APIs</title>
+  <!-- Incluyendo axios para poderlo utilizar-->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+      background: #f4f4f9;
+    }
+    h1 {
+      text-align: center;
+    }
+    .buttons {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      cursor: pointer;
+      border: none;
+      border-radius: 6px;
+      background: #2b6cb0;
+      color: white;
+    }
+    button:hover {
+      background: #244e86;
+    }
+    #data-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 16px;
+    }
+    #data-container div.character-card {
+      background: white;
+      border-radius: 8px;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+    }
+    #data-container img {
+      width: 100%;
+      border-radius: 6px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Información de Personajes</h1>
+  <div class="buttons">
+    <button id="fetch-btn">Obtener con Fetch</button>
+    <button id="axios-btn">Obtener con Axios</button>
+  </div>
+  <div id="data-container"></div>
+  <script src="app.js"></script>
+</body>
+</html>
