@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro · Cumbre Norte 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <div class="page">
+
+        <!-- Panel izquierdo: identidad del evento -->
+        <aside class="panel-evento">
+            <div class="panel-evento__contenido">
+                <span class="eyebrow">02 — 04 OCT 2026 · MONTERREY</span>
+                <h1 class="panel-evento__titulo">Cumbre<br>Norte</h1>
+                <p class="panel-evento__desc">Tres días de charlas, talleres y encuentros para quienes construyen
+                    tecnología, negocios y cultura en el norte del país.</p>
+
+                <ul class="ticket-stub" aria-hidden="true">
+                    <li><span>Sede</span>Centro de Convenciones, Monterrey</li>
+                    <li><span>Cupo</span>420 lugares</li>
+                    <li><span>Idioma</span>Español</li>
+                </ul>
+
+                <p class="panel-evento__nota">Completa el formulario para asegurar tu lugar. Recibirás la confirmación
+                    por correo.</p>
+            </div>
+        </aside>
+
+        <!-- Panel derecho: formulario -->
+        <main class="panel-formulario">
+            <form id="registroEvento" novalidate>
+                <h2 class="form-titulo">Formulario de registro</h2>
+
+                <!-- Sección 1: Datos personales -->
+                <fieldset class="grupo">
+                    <legend>Datos de contacto</legend>
+
+                    <div class="campo">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" name="nombre" placeholder="Ej. Ana García López" required
+                            minlength="3" maxlength="60">
+                        <span class="mensaje-error" id="error-nombre" role="alert"></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="correo">Correo electrónico</label>
+                        <input type="email" id="correo" name="correo" placeholder="ana@correo.com" required>
+                        <span class="mensaje-error" id="error-correo" role="alert"></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="telefono">Teléfono (10 dígitos)</label>
+                        <input type="tel" id="telefono" name="telefono" placeholder="8112345678" required>
+                        <span class="mensaje-error" id="error-telefono" role="alert"></span>
+                    </div>
+                </fieldset>
+
+                <!-- Sección 2: Intereses -->
+                <fieldset class="grupo">
+                    <legend>Áreas de interés</legend>
+                    <p class="ayuda">Selecciona al menos una para personalizar tu agenda.</p>
+
+                    <div class="opciones opciones--checkbox">
+                        <label class="opcion">
+                            <input type="checkbox" name="intereses" value="tecnologia">
+                            <span>Tecnología</span>
+                        </label>
+                        <label class="opcion">
+                            <input type="checkbox" name="intereses" value="negocios">
+                            <span>Negocios</span>
+                        </label>
+                        <label class="opcion">
+                            <input type="checkbox" name="intereses" value="arte">
+                            <span>Arte y cultura</span>
+                        </label>
+                        <label class="opcion">
+                            <input type="checkbox" name="intereses" value="sustentabilidad">
+                            <span>Sustentabilidad</span>
+                        </label>
+                    </div>
+                    <span class="mensaje-error" id="error-intereses" role="alert"></span>
+                </fieldset>
+
+                <!-- Sección 3: Horario -->
+                <fieldset class="grupo">
+                    <legend>Horario preferido</legend>
+
+                    <div class="opciones opciones--radio">
+                        <label class="opcion">
+                            <input type="radio" name="horario" value="manana">
+                            <span>Mañana <small>9:00 – 13:00</small></span>
+                        </label>
+                        <label class="opcion">
+                            <input type="radio" name="horario" value="tarde">
+                            <span>Tarde <small>14:00 – 18:00</small></span>
+                        </label>
+                        <label class="opcion">
+                            <input type="radio" name="horario" value="noche">
+                            <span>Noche <small>19:00 – 22:00</small></span>
+                        </label>
+                    </div>
+                    <span class="mensaje-error" id="error-horario" role="alert"></span>
+                </fieldset>
+
+                <!-- Sección 4: Fecha y documento -->
+                <fieldset class="grupo">
+                    <legend>Detalles finales</legend>
+
+                    <div class="campo">
+                        <label for="fecha">Fecha en la que asistirás</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                        <span class="mensaje-error" id="error-fecha" role="alert"></span>
+                    </div>
+
+                    <div class="campo">
+                        <label for="archivo">Identificación oficial (opcional)</label>
+                        <input type="file" id="archivo" name="archivo" accept=".pdf,.jpg,.jpeg,.png">
+                        <span class="ayuda">Formatos aceptados: PDF, JPG o PNG. Máximo 2 MB.</span>
+                        <span class="mensaje-error" id="error-archivo" role="alert"></span>
+                    </div>
+                </fieldset>
+
+                <button type="submit" class="btn-enviar">Confirmar mi registro</button>
+                <p class="mensaje-estado" id="mensajeEstado" role="status"></p>
+            </form>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
