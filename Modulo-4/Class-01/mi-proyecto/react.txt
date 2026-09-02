@@ -1,0 +1,13 @@
+mostrar y ocultar texto => hola  mundo
+
+cambiar el color del fondo y texto => modo oscuro/ modo claro
+
+contador con limites =>  0 10 no pueda aumentar
+
+semaforo: crear tres botones (rojo, amarillo, verde) camiar el color del circulo 
+
+like publiciones en l forma que queramos y contar como sifuera facebook
+
+mostrar cuantos caracteres tiene el texto que colocamos usando un textarea
+
+juego del adivina adivinador (adivina el numero), generar un numero aleatoreo del 1 al 50, el usuario escribe un nuero muy alto/ bajo o el numero correcto y tener un boton de reiniciar
