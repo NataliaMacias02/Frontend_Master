@@ -1,0 +1,9 @@
+.app-fondo {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+  background:
+    radial-gradient(circle at 50% 0%, #3a3f47 0%, #1c1e22 60%, #101114 100%);
+}
