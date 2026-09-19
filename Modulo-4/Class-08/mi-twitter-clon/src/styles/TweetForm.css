@@ -1,0 +1,106 @@
+.tweet-form {
+  background: white;
+  border: 1px solid #e1e8ed;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.tweet-input {
+  width: 100%;
+  min-height: 100px;
+  padding: 12px;
+  border: 1px solid #e1e8ed;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu,
+    Cantarell, sans-serif;
+  resize: vertical;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+.tweet-input:focus {
+  outline: none;
+  border-color: #1da1f2;
+  box-shadow: 0 0 0 3px rgba(29, 161, 242, 0.1);
+}
+
+.tweet-input::placeholder {
+  color: #657786;
+}
+
+.tweet-form-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 12px;
+  gap: 12px;
+}
+
+.char-count {
+  color: #657786;
+  font-size: 13px;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.char-count.warning {
+  color: #ffa500;
+}
+
+.tweet-submit-btn {
+  padding: 10px 24px;
+  background: #1da1f2;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+.tweet-submit-btn:hover:not(:disabled) {
+  background: #1a8cd8;
+  box-shadow: 0 3px 12px rgba(29, 161, 242, 0.3);
+  transform: translateY(-2px);
+}
+
+.tweet-submit-btn:active:not(:disabled) {
+  transform: translateY(0);
+}
+
+.tweet-submit-btn:disabled {
+  background: #e1e8ed;
+  color: #b7bfc7;
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+@media (max-width: 480px) {
+  .tweet-form {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+
+  .tweet-input {
+    min-height: 80px;
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .tweet-submit-btn {
+    padding: 8px 16px;
+    font-size: 14px;
+    min-width: 80px;
+  }
+
+  .tweet-form-footer {
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+}

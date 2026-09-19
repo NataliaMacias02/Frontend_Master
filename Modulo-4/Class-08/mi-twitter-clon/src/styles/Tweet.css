@@ -1,0 +1,127 @@
+.tweet {
+  background: white;
+  border: 1px solid #e1e8ed;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  transition: all 0.3s ease;
+  animation: fadeIn 0.3s ease;
+}
+
+.tweet:hover {
+  border-color: #1da1f2;
+  box-shadow: 0 2px 8px rgba(29, 161, 242, 0.1);
+}
+
+.tweet-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tweet-author {
+  font-weight: 600;
+  color: #1da1f2;
+  font-size: 14px;
+}
+
+.tweet-time {
+  color: #657786;
+  font-size: 13px;
+}
+
+.tweet-delete-btn {
+  background: none;
+  border: none;
+  color: #dd4949;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.tweet-delete-btn:hover {
+  background: #fee;
+  color: #dd4949;
+}
+
+.tweet-content {
+  margin-bottom: 16px;
+}
+
+.tweet-content p {
+  margin: 0;
+  color: #333;
+  font-size: 15px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+}
+
+.tweet-footer {
+  display: flex;
+  gap: 16px;
+  border-top: 1px solid #e1e8ed;
+  padding-top: 12px;
+}
+
+.tweet-like-btn {
+  background: none;
+  border: none;
+  color: #657786;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 8px;
+  border-radius: 20px;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.tweet-like-btn:hover:not(:disabled) {
+  background: #fff0f0;
+  color: #dd4949;
+}
+
+.tweet-like-btn.liked {
+  color: #dd4949;
+  cursor: not-allowed;
+}
+
+.tweet-like-btn:disabled {
+  opacity: 0.8;
+  cursor: not-allowed;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .tweet {
+    padding: 12px;
+    margin-bottom: 12px;
+  }
+
+  .tweet-content p {
+    font-size: 14px;
+  }
+
+  .tweet-like-btn {
+    font-size: 13px;
+    padding: 6px;
+  }
+}
