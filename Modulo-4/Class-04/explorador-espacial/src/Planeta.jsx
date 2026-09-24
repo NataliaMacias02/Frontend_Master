@@ -10,7 +10,7 @@ function Planeta({ nombre }) {
     }, [])
 
     return (
-        <p>{nombre}</p>
+        <p className="planeta">{nombre}</p>
     )
 
 }

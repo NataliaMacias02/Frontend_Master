@@ -7,6 +7,8 @@ function App() {
   const [combustible, setCombustible] = useState(100);
   const [estadoNave, setEstadoNave] = useState("En órbita");
   const [planetasVisitados, setPlanetasVisitados] = useState([]);
+  // Funcionalidad adicional: lista de planetas para aterrizaje aleatorio
+  const planetasDisponibles = ['Neptuno', 'Mercurio', 'Jupiter', 'Venus', 'Urano', 'Tierra', 'Marte', 'Saturno'];
 
 
   // montaje y desmontaje
@@ -45,13 +47,18 @@ function App() {
   return (
     <>
       <h1>Panel de Control - Explorador Espacial</h1>
-      <p>Distancia: {distancia}</p>
-      <p>Combustible: {combustible}</p>
-      <p>{mensajeEstado}</p>
+      <div className="panel">
+        <p>Distancia: {distancia}</p>
+        <p>Combustible: {combustible}</p>
+        <p>{mensajeEstado}</p>
+      </div>
 
       <button onClick={() => {
         setEstadoNave("Aterrizando")
-        setPlanetasVisitados([...planetasVisitados, "marte"])
+        // Selección aleatoria del planeta (antes era fijo: "marte")
+        const indiceAleatorio = Math.floor(Math.random() * planetasDisponibles.length)
+        const planetaElegido = planetasDisponibles[indiceAleatorio]
+        setPlanetasVisitados([...planetasVisitados, planetaElegido])
       }}>Aterrizar</button>
 
       {planetasVisitados.map((nombrePlaneta, index) => (
